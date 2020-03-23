@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
+    public Animator animator;
     private Rigidbody2D rb;
     public float dashSpeed;
     private float dashTime;
     public float startDashTime;
     private int direction;
+    private float moveinput;
     
     void Start()
     {
@@ -18,23 +20,22 @@ public class Dash : MonoBehaviour
 
     private void Update()
     {
+        moveinput = Input.GetAxis("Horizontal");
+
         if(direction == 0)
         {
-            if(Input.GetKeyDown(KeyCode.LeftArrow))
+            if(Input.GetKeyDown(KeyCode.LeftShift))
             {
-                direction = 1;
-            }
-            else if(Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                direction = 2;
-            }
-            else if(Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                direction = 3;
-            }
-            else if(Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                direction = 4;
+                animator.SetTrigger("Dash");
+
+                if (moveinput < 0)
+                {
+                    direction = 1;
+                }
+                else if (moveinput > 0)
+                {
+                    direction = 2;
+                }
             }
         }
         else
@@ -42,7 +43,7 @@ public class Dash : MonoBehaviour
             if(dashTime <= 0)
             {
                 direction = 0;
-                dashSpeed = startDashTime;
+                dashTime = startDashTime;
                 rb.velocity = Vector2.zero;
             }
             else
@@ -53,17 +54,9 @@ public class Dash : MonoBehaviour
                 {
                     rb.velocity = Vector2.left * dashSpeed;
                 }
-                else if(direction == 2)
+                if (direction == 2 )
                 {
                     rb.velocity = Vector2.right * dashSpeed;
-                }
-                else if(direction == 3)
-                {
-                    rb.velocity = Vector2.up * dashSpeed;
-                }
-                else if(direction == 4)
-                {
-                    rb.velocity = Vector2.down * dashSpeed;
                 }
             }
         }
