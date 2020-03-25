@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int maxHealth = 100;
-    int currentHealth;
+    public int health = 100;
 
-    // Start is called before the first frame update
-    void Start()
+    public GameObject deathEffect;
+
+    public void takeDamage(int damage)
     {
-        currentHealth = maxHealth;
-    }
+        health -= damage;
 
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-
-
-        if (currentHealth <= 0)
+        if (health <= 0)
         {
             Die();
         }
@@ -26,6 +20,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Enemy died!");
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
