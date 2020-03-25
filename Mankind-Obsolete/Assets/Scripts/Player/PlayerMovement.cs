@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     bool crouch = false;
 
+    int canDJ = 2;
+
     // Update is called once per frame
     void Update()
     {
@@ -23,10 +25,25 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
+        if(controller.m_Grounded)
+        {
+            canDJ = 2;
+        }
+
         if(Input.GetButtonDown("Jump"))
         {
-            jump = true;
-            animator.SetBool("IsJumping", true);
+            if (canDJ > 0)
+            {
+                jump = true;
+                animator.SetBool("IsJumping", true);
+                canDJ--;
+            }
+            else
+            {
+                jump = false;
+                animator.SetBool("isJumping", true);
+                canDJ = 0;
+            }
         }
 
         if (Input.GetButtonDown("Crouch"))

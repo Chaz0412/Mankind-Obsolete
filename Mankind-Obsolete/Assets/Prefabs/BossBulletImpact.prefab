@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4345241211358683281}
   - component: {fileID: 4345241211358683280}
   - component: {fileID: -1750805485323550703}
+  - component: {fileID: 7373561523926420644}
   m_Layer: 0
   m_Name: BossBulletImpact
   m_TagString: Untagged
@@ -118,3 +119,16 @@ CircleCollider2D:
   m_Offset: {x: -0.23577118, y: -0.1791861}
   serializedVersion: 2
   m_Radius: 0.44130397
+--- !u!114 &7373561523926420644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345241211358683283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3fbc0398f2170148897ca6374aa2ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifespan: 1
