@@ -138,3 +138,4 @@ MonoBehaviour:
   rb: {fileID: 7538179986325440332}
   impactEffect: {fileID: 4345241211358683283, guid: 0f882b9eece447240b0865228f0a092a,
     type: 3}
+  lifeSpan: 0.5

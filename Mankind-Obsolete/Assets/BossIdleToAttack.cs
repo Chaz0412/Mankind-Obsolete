@@ -5,27 +5,37 @@ using UnityEngine;
 public class BossIdleToAttack : StateMachineBehaviour
 {
 
-    private int ran = 0;
-
+    public float ran;
+    public bool high;
+    public bool low;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        ran = Random.Range(0f, 1f);
+        if (ran >= 0.5f)
+        {
+            high = true;
+            low = false;
+        }
+        else if (ran < 0.5f)
+        {
+            low = true;
+            high = false;
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        ran = Random.Range(0, 3);
-        if (ran == 2)
+
+        if(high == true)
         {
             animator.SetTrigger("HighAttack");
         }
-        else if(ran == 1)
+        else if (low == true)
         {
             animator.SetTrigger("LowAttack");
         }
-        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
