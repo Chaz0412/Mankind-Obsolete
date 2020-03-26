@@ -9,21 +9,7 @@ public class LowWeapon : MonoBehaviour
     public GameObject bossBulletPrefab;
     bool hasshot = false;
 
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-        if (hasshot == false)
-        {
-            Shoot();
-            hasshot = true;
-        }
-        
-    }
-
-    void Shoot()
+    public void LowShoot()
     {
         Instantiate(bossBulletPrefab, firePoint.position, firePoint.rotation);
     }
