@@ -18,8 +18,9 @@ public class CharacterController2D : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
+    public Animator animator;
 
-	[Header("Events")]
+    [Header("Events")]
 	[Space]
 
 	public UnityEvent OnLandEvent;
@@ -134,6 +135,7 @@ public class CharacterController2D : MonoBehaviour
 		}
         else if(jump && hasDoubleJumped == false)
         {
+            animator.SetTrigger("Double");
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
             hasDoubleJumped = true;
         }
