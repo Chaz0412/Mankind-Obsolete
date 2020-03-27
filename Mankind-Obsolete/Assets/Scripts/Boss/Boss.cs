@@ -7,16 +7,19 @@ public class Boss : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
+    public HealthBar healthBar;
     public GameObject deathEffect;
 
-    private void Start()
+    void Start()
     {
         currentHealth = maxHealth;
+        healthBar.setMaxHealth(maxHealth);
     }
 
     public void takeDamage(int damage)
     {
         currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
 
         if (currentHealth <= 0)
         {

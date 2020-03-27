@@ -2,22 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossIdleToAttack : StateMachineBehaviour
+public class BossIdleBehaviour : StateMachineBehaviour
 {
-
-    public float ran;
+    public int ran;
     public bool high;
     public bool low;
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        ran = Random.Range(0f, 1f);
-        if (ran >= 0.5f)
+
+        ran = Random.Range(0, 2);
+        if (ran == 1)
         {
             high = true;
             low = false;
         }
-        else if (ran < 0.5f)
+        else if (ran == 0)
         {
             low = true;
             high = false;
@@ -27,8 +28,7 @@ public class BossIdleToAttack : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
-        if(high == true)
+        if (high == true)
         {
             animator.SetTrigger("HighAttack");
         }
@@ -44,5 +44,4 @@ public class BossIdleToAttack : StateMachineBehaviour
         animator.ResetTrigger("HighAttack");
         animator.ResetTrigger("LowAttack");
     }
-
 }

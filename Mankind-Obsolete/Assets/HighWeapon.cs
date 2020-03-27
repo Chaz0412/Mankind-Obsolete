@@ -6,7 +6,7 @@ public class HighWeapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bossBulletPrefab;
-    bool hasshot = false;
+    //bool hasshot = false;
 
     public void HighShoot()
     {

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7538179986325440332}
   - component: {fileID: 7538179986325440323}
   - component: {fileID: -278328364318337906}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BossBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,9 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d56e8dd97ce2c17448bc3b00dfbc30a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -20
-  damage: 40
+  speed: -10
+  damage: 10
   rb: {fileID: 7538179986325440332}
-  impactEffect: {fileID: 4345241211358683283, guid: 0f882b9eece447240b0865228f0a092a,
-    type: 3}
-  lifeSpan: 0.5
+  impactEffect: {fileID: 0}
+  lifeSpan: 1

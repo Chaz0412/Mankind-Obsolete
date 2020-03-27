@@ -8,8 +8,8 @@ public class Bullet : MonoBehaviour
     public float speed = -20f;
     public int damage = 40;
     public Rigidbody2D rb;
-    public GameObject impactEffect;
-    public float lifeSpan = 1f;
+    //public GameObject impactEffect;
+    //public float lifeSpan = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +25,8 @@ public class Bullet : MonoBehaviour
             player.takeDamage(damage);
         }
 
-        Instantiate(impactEffect, transform.position, transform.rotation);
+        //Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
-        Destroy(impactEffect, lifeSpan);
+        //Destroy(impactEffect, lifeSpan);
     }   
 }
