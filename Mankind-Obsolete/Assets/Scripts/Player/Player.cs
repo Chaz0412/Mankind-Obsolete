@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
-    public GameObject deathEffect;
+    //public GameObject deathEffect;
+    public DeathMenu deathMenu;
+    public PauseMenu pauseMenu;
 
     void Start()
     {
@@ -19,6 +21,15 @@ public class Player : MonoBehaviour
     void Update()
     {
         healthBar.SetHealth(currentHealth);
+
+        if(Input.GetKeyDown(KeyCode.Escape) && pauseMenu.gameObject.activeInHierarchy == false)
+        {
+            pauseMenu.Pause();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.gameObject.activeInHierarchy == true)
+        {
+            pauseMenu.Resume();
+        }
     }
 
     public void takeDamage (int damage)
@@ -29,6 +40,7 @@ public class Player : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            deathMenu.gameObject.SetActive(true);
         }
     }
 
@@ -47,8 +59,10 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-    }
+        //Instantiate(deathEffect, transform.position, Quaternion.identity);
+        //Destroy(gameObject);
+        Time.timeScale = 0f;
+        gameObject.SetActive(false);
 
+    }
 }
