@@ -1333,6 +1333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01051c2a50f2c4d42984d102c5422964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentScene: Level_FinalBoss
+  mainMenu: MainMenu
 --- !u!114 &1119984459 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 606821152396929862, guid: e49248fc965cd3945b488c04b04cf86f,

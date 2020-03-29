@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathMenu : MonoBehaviour
 {
-    
+    public string currentScene;
+    public string mainMenu;
+
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        //insert code to reset level
+        SceneManager.LoadScene(currentScene);
         gameObject.SetActive(false);
         AudioListener.pause = false;
     }
@@ -17,6 +20,6 @@ public class DeathMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         AudioListener.pause = false;
-        //insert code to quit to main
+        SceneManager.LoadScene(mainMenu);
     }
 }
