@@ -13,7 +13,12 @@ public class Player : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        healthBar.setMaxHealth(maxHealth);
+        healthBar.SetHealth(currentHealth);
+    }
+
+    void Update()
+    {
+        healthBar.SetHealth(currentHealth);
     }
 
     public void takeDamage (int damage)
@@ -25,6 +30,19 @@ public class Player : MonoBehaviour
         {
             Die();
         }
+    }
+
+    public void healthPickup()
+    {
+        if(currentHealth <= 80)
+        {
+            currentHealth += 20;
+        }
+        else if(currentHealth > 80)
+        {
+            currentHealth = maxHealth;
+        }
+
     }
 
     void Die()
