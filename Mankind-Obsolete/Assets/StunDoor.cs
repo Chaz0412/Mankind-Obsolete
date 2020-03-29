@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class StunDoor : MonoBehaviour
 {
-    Animator animator;
+    public Animator animator;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.tag == "Stun")
+        if (collider.tag == "Stun")
         {
-            print("Door hit");
             animator.SetTrigger("Open");
-            gameObject.SetActive(false);
+            
         }
+            
+    }
+
+    public void disableDoor()
+    {
+        gameObject.SetActive(false);
     }
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
