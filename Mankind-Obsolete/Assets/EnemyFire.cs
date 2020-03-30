@@ -13,7 +13,7 @@ public class EnemyFire : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fireRate = 1f;
+        fireRate = 0.75f;
         nextFire = Time.time;
     }
 
