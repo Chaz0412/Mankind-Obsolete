@@ -11,6 +11,7 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public LayerMask wallLayers;
+    public LayerMask bossLayers;
     public int attackDamge = 40;
     
 
@@ -30,6 +31,7 @@ public class PlayerCombat : MonoBehaviour
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         Collider2D[] hitWalls = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, wallLayers);
+        Collider2D[] hitBoss = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, bossLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
@@ -38,6 +40,10 @@ public class PlayerCombat : MonoBehaviour
         foreach (Collider2D wall in hitWalls)
         {
             wall.GetComponent<Wall>().takeDamage(attackDamge);
+        }
+        foreach (Collider2D boss in hitBoss)
+        {
+            boss.GetComponent<Boss>().takeDamage(attackDamge);
         }
     }
 

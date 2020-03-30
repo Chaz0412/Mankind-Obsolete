@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
-    public HealthBar healthBar;
     public GameObject deathEffect;
 
     private Vector3 position;
@@ -16,7 +15,6 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        healthBar.setMaxHealth(maxHealth);
     }
 
     void Update()
@@ -28,7 +26,6 @@ public class Enemy : MonoBehaviour
     public void takeDamage(int damage)
     {
         currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
 
         if (currentHealth <= 0)
         {

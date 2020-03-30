@@ -21,6 +21,7 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
+
         position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
     }
 
@@ -40,5 +41,6 @@ public class Boss : MonoBehaviour
         AudioSource.PlayClipAtPoint(deathSound, position);
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
