@@ -18,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
 
     int canDJ = 2;
 
+    private Vector3 position;
+    public AudioClip jumpSound;
+
     // Update is called once per frame
     void Update()
     {
@@ -37,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
                 jump = true;
                 animator.SetBool("IsJumping", true);
                 canDJ--;
+                AudioSource.PlayClipAtPoint(jumpSound, position);
             }
             else
             {
@@ -54,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
         {
             crouch = false;
         }
+
+        position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
     }
 
     public void OnLanding()

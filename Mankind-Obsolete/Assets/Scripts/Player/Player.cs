@@ -12,6 +12,11 @@ public class Player : MonoBehaviour
     public DeathMenu deathMenu;
     public PauseMenu pauseMenu;
 
+    private Vector3 position;
+    public AudioClip damageSound;
+    public AudioClip deathSound;
+    public AudioClip healSound;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -30,15 +35,19 @@ public class Player : MonoBehaviour
         {
             pauseMenu.Resume();
         }
+        AudioListener.volume = 15f;
+        position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
     }
 
     public void takeDamage (int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        AudioSource.PlayClipAtPoint(damageSound, position);
 
         if (currentHealth <= 0)
         {
+            AudioSource.PlayClipAtPoint(deathSound, position);
             Die();
             deathMenu.gameObject.SetActive(true);
         }
@@ -46,7 +55,8 @@ public class Player : MonoBehaviour
 
     public void healthPickup()
     {
-        if(currentHealth <= 80)
+        AudioSource.PlayClipAtPoint(healSound, position);
+        if (currentHealth <= 80)
         {
             currentHealth += 20;
         }

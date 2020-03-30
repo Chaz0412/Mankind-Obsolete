@@ -5338,6 +5338,7 @@ MonoBehaviour:
   healthBar: {fileID: 746963046}
   deathEffect: {fileID: 8231267101356855280, guid: 9992ae239341fbd49884dbac97c40824,
     type: 3}
+  deathSound: {fileID: 8300000, guid: 62a9e10a314a41140aa52981d3daa09b, type: 3}
 --- !u!114 &1859503942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5365,6 +5366,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5783808832179198150, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1702422942}
+    - target: {fileID: 5783808832179198150, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: meleeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0cc4cd77802442a44a88f390d0dcefba, type: 3}
+    - target: {fileID: 5783808832179198171, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ecf0fe6eac827b44087524c8c2fedd41, type: 3}
     - target: {fileID: 5783808832179198172, guid: 8957fa32a30b8354bac67644af32c847,
         type: 3}
       propertyPath: m_CrouchDisableCollider
@@ -5440,5 +5456,25 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1485671643}
+    - target: {fileID: 5819927091168503733, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: damageSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 227307a0909402849916f8c85b33c87c, type: 3}
+    - target: {fileID: 5819927091168503733, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 62a9e10a314a41140aa52981d3daa09b, type: 3}
+    - target: {fileID: 5819927091168503733, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: healSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a8fec8e6a3939341b54ec50c637b39e, type: 3}
+    - target: {fileID: 7591257990563765173, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: attackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0cc4cd77802442a44a88f390d0dcefba, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8957fa32a30b8354bac67644af32c847, type: 3}

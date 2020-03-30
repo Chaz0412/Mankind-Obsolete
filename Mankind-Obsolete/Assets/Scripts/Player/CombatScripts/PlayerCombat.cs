@@ -20,6 +20,7 @@ public class PlayerCombat : MonoBehaviour
         {
             Attack();
         }
+        
     }
 
     void Attack()

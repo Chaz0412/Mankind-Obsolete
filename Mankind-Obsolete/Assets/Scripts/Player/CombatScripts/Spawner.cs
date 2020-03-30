@@ -11,13 +11,20 @@ public class Spawner : MonoBehaviour
     private float moveinput;
 
 
+    private Vector3 position;
+    public AudioClip attackSound;
+
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             StunBlast();
+
+            AudioSource.PlayClipAtPoint(attackSound, position);
         }
+        position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
     }
 
     void StunBlast()
