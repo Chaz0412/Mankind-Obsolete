@@ -1602,7 +1602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854024783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.63, y: -1.65, z: 0}
+  m_LocalPosition: {x: -1.04, y: -1.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1859503938}
@@ -5803,7 +5803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5218d96bbcdb1b4fba295f87ff33bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
+  maxHealth: 400
   currentHealth: 0
   healthBar: {fileID: 746963046}
   deathEffect: {fileID: 8231267101356855280, guid: 9992ae239341fbd49884dbac97c40824,
