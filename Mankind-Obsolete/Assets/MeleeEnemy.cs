@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class MeleeEnemy : MonoBehaviour
 {
-    Animator animator;
+    public Animator animator;
     public float attackRange;
     public int dmg;
     private float lastAttack;
     public float attackDelay;
     public Transform target;
-    Player player;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Player player;
+    private Vector3 position;
 
     // Update is called once per frame
     void Update()
@@ -24,10 +19,12 @@ public class MeleeEnemy : MonoBehaviour
         float distance = Vector3.Distance(transform.position, target.position);
         if(distance < attackRange)
         {
-                //animator.SetTrigger("Attack");
-                //player.takeDamage(dmg);
-                Debug.Log("hit");
+            if (Time.time > lastAttack + attackDelay)
+            {
+                animator.Play("MeleeAttack");
+                player.takeDamage(dmg);
                 lastAttack = Time.time;
+            }
         }
     }
 }

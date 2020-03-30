@@ -11,7 +11,6 @@ public class StunDoor : MonoBehaviour
         if (collider.tag == "Stun")
         {
             animator.SetTrigger("Open");
-            
         }
             
     }

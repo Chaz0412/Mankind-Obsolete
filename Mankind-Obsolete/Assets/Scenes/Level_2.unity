@@ -24380,10 +24380,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a2e9899520b68746ab1448ccf44ce16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 95.5
+  animator: {fileID: 365469605}
+  attackRange: 2
   dmg: 20
-  attackDelay: 1
-  target: {fileID: 1273044644}
+  attackDelay: 2
+  target: {fileID: 2044010964}
+  player: {fileID: 1682848397}
 --- !u!114 &365469599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24409,6 +24411,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &365469605 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2726000599805933033, guid: 3ecccb792d7fe384fb8eea02cabb35a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 522962901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &505898310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26622,7 +26630,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1425485302
 GameObject:
