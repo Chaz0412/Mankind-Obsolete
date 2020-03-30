@@ -13,13 +13,17 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask wallLayers;
     public LayerMask bossLayers;
     public int attackDamge = 40;
-    
+
+    private Vector3 position;
+    public AudioClip damageSound;
+
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            AudioSource.PlayClipAtPoint(damageSound, position);
             Attack();
         }
         

@@ -26648,6 +26648,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5783808832179198150, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: damageSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 41829cb337a80bd4f9d5b66f5758510a, type: 3}
     - target: {fileID: 5783808832179198171, guid: 8957fa32a30b8354bac67644af32c847,
         type: 3}
       propertyPath: jumpSound
@@ -26708,6 +26713,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5783808832179198175, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: dashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a8413e6cbf4e0241b433f02234bb097, type: 3}
     - target: {fileID: 5819927091168503733, guid: 8957fa32a30b8354bac67644af32c847,
         type: 3}
       propertyPath: healthBar

@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     public AudioClip deathSound;
     public AudioClip healSound;
 
+
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -36,6 +38,7 @@ public class Player : MonoBehaviour
             pauseMenu.Resume();
         }
         position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+
     }
 
     public void takeDamage (int damage)

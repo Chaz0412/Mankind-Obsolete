@@ -11,7 +11,10 @@ public class Dash : MonoBehaviour
     public float startDashTime;
     private int direction;
     private float moveinput;
-    
+
+    private Vector3 position;
+    public AudioClip dashSound;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,11 +25,14 @@ public class Dash : MonoBehaviour
     {
         moveinput = Input.GetAxis("Horizontal");
 
-        if(direction == 0)
+        position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+
+        if (direction == 0)
         {
             if(Input.GetKeyDown(KeyCode.LeftShift))
             {
                 animator.SetTrigger("Dash");
+                AudioSource.PlayClipAtPoint(dashSound, position);
 
                 if (moveinput < 0)
                 {
