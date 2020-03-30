@@ -1075,7 +1075,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 713572261}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: HighFirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1282,7 +1282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 854024784}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: LowFirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5167,7 +5167,7 @@ GameObject:
   - component: {fileID: 1859503940}
   - component: {fileID: 1859503942}
   - component: {fileID: 1859503941}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -5330,10 +5330,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1859503934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f2fb7abaee3bcf408544088bc134fdc, type: 3}
+  m_Script: {fileID: 11500000, guid: b5218d96bbcdb1b4fba295f87ff33bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 300
   currentHealth: 0
   healthBar: {fileID: 746963046}
   deathEffect: {fileID: 8231267101356855280, guid: 9992ae239341fbd49884dbac97c40824,
@@ -5376,6 +5376,11 @@ PrefabInstance:
       propertyPath: meleeSound
       value: 
       objectReference: {fileID: 8300000, guid: 0cc4cd77802442a44a88f390d0dcefba, type: 3}
+    - target: {fileID: 5783808832179198150, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: bossLayers.m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
     - target: {fileID: 5783808832179198171, guid: 8957fa32a30b8354bac67644af32c847,
         type: 3}
       propertyPath: jumpSound
