@@ -5,22 +5,21 @@ using UnityEngine;
 public class Wall : MonoBehaviour
 {
 
-    public Sprite dmgSprite;
-    public int hp = 4;
+    public int maxHealth = 100;
+    public int currentHealth;
 
-    private SpriteRenderer spriteRenderer;
-
-    // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        currentHealth = maxHealth;
     }
 
-    public void DamageWall(int loss)
+    public void takeDamage(int damage)
     {
-        spriteRenderer.sprite = dmgSprite;
-        if (hp <= 0)
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
             gameObject.SetActive(false);
+        }
     }
-
 }
