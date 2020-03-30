@@ -26307,6 +26307,31 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1256339984}
+    - target: {fileID: 5819927091168503733, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: deathMenu
+      value: 
+      objectReference: {fileID: 189581610}
+    - target: {fileID: 5819927091168503733, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 189581609}
+    - target: {fileID: 5819927091168503733, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 62a9e10a314a41140aa52981d3daa09b, type: 3}
+    - target: {fileID: 5819927091168503733, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: healSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a8fec8e6a3939341b54ec50c637b39e, type: 3}
+    - target: {fileID: 5819927091168503733, guid: 8957fa32a30b8354bac67644af32c847,
+        type: 3}
+      propertyPath: damageSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 227307a0909402849916f8c85b33c87c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8957fa32a30b8354bac67644af32c847, type: 3}
 --- !u!4 &2044010964 stripped
