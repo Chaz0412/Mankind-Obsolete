@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
                 jump = true;
                 animator.SetBool("IsJumping", true);
                 canDJ--;
-                AudioSource.PlayClipAtPoint(jumpSound, position);
+                AudioSource.PlayClipAtPoint(jumpSound, position, 300f);
             }
             else
             {

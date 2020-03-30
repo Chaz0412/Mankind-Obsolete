@@ -35,7 +35,6 @@ public class Player : MonoBehaviour
         {
             pauseMenu.Resume();
         }
-        AudioListener.volume = 15f;
         position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
     }
 
@@ -43,7 +42,7 @@ public class Player : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
-        AudioSource.PlayClipAtPoint(damageSound, position);
+        AudioSource.PlayClipAtPoint(damageSound, position, 50f);
 
         if (currentHealth <= 0)
         {
