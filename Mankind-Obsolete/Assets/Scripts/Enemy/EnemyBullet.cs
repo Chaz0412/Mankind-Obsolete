@@ -30,7 +30,7 @@ public class EnemyBullet : MonoBehaviour
             Destroy(gameObject);
             player.takeDamage(damage);
         }
-        else if(collision.gameObject.name.Equals("TilemapBase"))
+        else if(collision.gameObject.name.Equals("MainTilemap"))
         {
             Destroy(gameObject);
         }
