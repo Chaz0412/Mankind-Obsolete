@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
-    public GameObject deathEffect;
+    //public GameObject deathEffect;
 
     private Vector3 position;
     public AudioClip deathSound;
@@ -35,9 +35,9 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        AudioSource.PlayClipAtPoint(deathSound, position);
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        //AudioSource.PlayClipAtPoint(deathSound, position);
+        //Instantiate(deathEffect, transform.position, Quaternion.identity);
+        //Destroy(gameObject);
         gameObject.SetActive(false);
     }
 }
